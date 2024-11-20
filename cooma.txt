@@ -1,0 +1,1 @@
+g++ Main.cpp Player.cpp Enemie.cpp Bullet.cpp UISounds.cpp -o sfml-app -IC:\Users\misuk\OneDrive\Documentos\libraries\SFML-2.6.1\include -LC:\Users\misuk\OneDrive\Documentos\libraries\SFML-2.6.1\lib -lsfml-graphics -lsfml-window -lsfml-system
