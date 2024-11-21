@@ -14,6 +14,7 @@ class Player : public Drawable{
         float GetRotation();
         Vector2f GetPosition();
         virtual void draw(RenderTarget&,RenderStates) const;
+
     private:
         Sprite sprite;
         float vel;

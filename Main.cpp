@@ -1,5 +1,3 @@
-#include <bits/stdc++.h>
-#include <time.h>
 #include <SFML/Graphics.hpp>
 #include "Player.h"
 #include "Bullet.h"

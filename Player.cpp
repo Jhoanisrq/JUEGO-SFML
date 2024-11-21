@@ -42,7 +42,7 @@ pair<bool,Vector2f> Player::AnswerShoot(RenderWindow &rw){
     Vector2f dirNorm = Vector2f(dir.x/sqrt(pow(dir.x,2)+pow(dir.y,2)),dir.y/sqrt(pow(dir.x,2)+pow(dir.y,2)));
 
     if(Mouse::isButtonPressed(Mouse::Left) && cadence >= 8){
-        cadence = 0;
+        cadence = 1;
         sprite.setTextureRect(IntRect(0,0,250,115));
         return {true,dirNorm};
     }
