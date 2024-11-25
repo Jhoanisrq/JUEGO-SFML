@@ -18,8 +18,8 @@ class Player : public Drawable{
     private:
         Sprite sprite;
         float vel;
-        int cadence = 8;
+        int cadencia = 8;
         void Movement(View&);
-        void Aim(RenderWindow&);
+        void apuntar(RenderWindow&);
 };
 #endif 

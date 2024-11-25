@@ -9,18 +9,18 @@ using namespace sf;
 class Enemie : public Drawable{
     private:
         Sprite sprite;
-        bool active;
+        bool activado;
         float vel;
-        int life;
+        int Hp;
         int dist;
         void Movement(Vector2f);
-        void Aim(Vector2f);
+        void apuntarPlayer(Vector2f);
     public:
         Enemie(Vector2f,Texture&);
         void Update(Vector2f,int);
         Vector2f GetPosition();
-        void TakeLife();
-        int ConsultLife();
+        void TakeHp();
+        int ConsultHp();
         virtual void draw(RenderTarget&,RenderStates) const;
 };
 #endif 

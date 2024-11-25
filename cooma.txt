@@ -1,2 +1,5 @@
-cd REVEL_POINT
-g++ Main.cpp Player.cpp Enemie.cpp Bullet.cpp UISounds.cpp -o sfml-app -IC:\Users\misuk\OneDrive\Documentos\libraries\SFML-2.6.1\include -LC:\Users\misuk\OneDrive\Documentos\libraries\SFML-2.6.1\lib -lsfml-graphics -lsfml-window -lsfml-system
+cd JUEGO-SFML
+
+g++ Main.cpp Player.cpp Enemie.cpp Proyectil.cpp UISonidos.cpp menu.cpp -o sfml-app -IC:\Users\misuk\OneDrive\Documentos\libraries\SFML-2.6.1\include -LC:\Users\misuk\OneDrive\Documentos\libraries\SFML-2.6.1\lib -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+
+.\sfml-app.exe

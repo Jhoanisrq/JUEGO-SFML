@@ -10,13 +10,13 @@ using namespace sf;
 class Menu {
 private:
     Font font;
-    Text titleText; // Título del juego
+    Text titleText; 
     Text startText;
     Text exitText;
     RectangleShape startBox;
     RectangleShape exitBox;
-    Sprite background; // Sprite para el fondo
-    Texture backgroundTexture; // Textura para el fondo
+    Sprite fondo_menu; 
+    Texture fondo_menuTexture; 
     bool isStartSelected;
 
 public:
@@ -28,4 +28,4 @@ public:
     void draw(RenderTarget &target) const;
 };
 
-#endif // MENU_H
+#endif

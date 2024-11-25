@@ -7,45 +7,45 @@ Menu::Menu() {
     }
 
     // Cargar la textura del fondo
-    if (!backgroundTexture.loadFromFile("fond_menu.png")) {
+    if (!fondo_menuTexture.loadFromFile("fond_menu.png")) {
         cout << "Error al cargar la textura del fondo" << endl;
     }
-    background.setTexture(backgroundTexture);
-    background.setScale(1000.0f / backgroundTexture.getSize().x, 650.0f / backgroundTexture.getSize().y); // Ajustar escala al tamaño de la ventana
-    background.setPosition(0, 0); // Posición del fondo
+    fondo_menu.setTexture(fondo_menuTexture);
+    fondo_menu.setScale(1010.0f / fondo_menuTexture.getSize().x, 650.0f / fondo_menuTexture.getSize().y);
+    fondo_menu.setPosition(0, 0); 
 
     // Configuración del título del juego
     titleText.setFont(font);
-    titleText.setString("Rebel Shooter"); // Título del juego
-    titleText.setCharacterSize(70); // Tamaño del texto
+    titleText.setString("Rebel Point"); 
+    titleText.setCharacterSize(80); 
     titleText.setFillColor(Color::White);
-    titleText.setPosition(350, 50); // Posición en la ventana
+    titleText.setPosition(240, 70); 
 
     // Configuración del texto "Iniciar Juego"
     startText.setFont(font);
     startText.setString("Iniciar Juego");
     startText.setCharacterSize(50);
     startText.setFillColor(Color::White);
-    startText.setPosition(420, 210); // Posición en la ventana
+    startText.setPosition(320, 210); 
 
     // Configuración del recuadro para "Iniciar Juego"
-    startBox.setSize(Vector2f(300, 70));
-    startBox.setFillColor(Color(0, 0, 0, 150)); // Color de fondo semi-transparente
-    startBox.setPosition(400, 200); // Posición del recuadro
+    startBox.setSize(Vector2f(360, 80));
+    startBox.setFillColor(Color(0, 0, 0, 150)); 
+    startBox.setPosition(300, 200); 
 
     // Configuración del texto "Salir del juego"
     exitText.setFont(font);
     exitText.setString("Salir del juego");
     exitText.setCharacterSize(50);
     exitText.setFillColor(Color::White);
-    exitText.setPosition(420, 310); // Posición en la ventana
+    exitText.setPosition(320, 310); 
 
     // Configuración del recuadro para "Salir del juego"
-    exitBox.setSize(Vector2f(300, 70));
-    exitBox.setFillColor(Color(0, 0, 0, 150)); // Color de fondo semi-transparente
-    exitBox.setPosition(400, 300); // Posición del recuadro
+    exitBox.setSize(Vector2f(420, 80));
+    exitBox.setFillColor(Color(0, 0, 0, 150));
+    exitBox.setPosition(300, 300); 
 
-    isStartSelected = true; // La opción inicial seleccionada
+    isStartSelected = true;
 }
 
 void Menu::MoveUp() {
@@ -77,10 +77,10 @@ bool Menu::isStartPressed() const {
 }
 
 void Menu::draw(RenderTarget &target) const {
-    target.draw(background); // Dibujar el fondo
-    target.draw(titleText); // Dibujar el título del juego
-    target.draw(startBox); // Dibujar el recuadro de "Iniciar Juego"
-    target.draw(startText); // Dibujar el texto de "Iniciar Juego"
-    target.draw(exitBox); // Dibujar el recuadro de "Salir del juego"
-    target.draw(exitText); // Dibujar el texto de "Salir del juego"
+    target.draw(fondo_menu);    
+    target.draw(titleText);   
+    target.draw(startBox);   
+    target.draw(startText);   
+    target.draw(exitBox);   
+    target.draw(exitText); 
 }
