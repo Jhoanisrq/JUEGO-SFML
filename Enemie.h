@@ -1,7 +1,9 @@
-#include <bits/stdc++.h> 
-#include <SFML/Graphics.hpp>
 #ifndef ENEMIE_H
 #define ENEMIE_H
+
+#include <bits/stdc++.h> 
+#include <SFML/Graphics.hpp>
+
 
 using namespace std;
 using namespace sf;
