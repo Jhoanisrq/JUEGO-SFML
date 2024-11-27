@@ -112,7 +112,7 @@ int main() {
 
 			//Aleatorio
 			srand(time(NULL));
-			while((int)enemies.size()<50){
+			while((int)enemies.size()<40){
 				IntRect fondoRect(player.GetPosition().x-505,player.GetPosition().y-325,1000,650);
 				int x = (rand()%1450)-725; //-725 a 724
 				int y = (rand()%950)-475;  //-475 a 474
@@ -150,7 +150,7 @@ int main() {
 
 			for(int i = 0; i < (int)enemies2.size(); i++){
 				enemie2Pos = Vector2f(window.mapCoordsToPixel(enemies2[i].GetPosition()));
-				IntRect enemies2Rect(enemie2Pos.x-10,enemie2Pos.y-12,25,25);
+				IntRect enemies2Rect((enemie2Pos.x-10),(enemie2Pos.y-10),25,25);
 				if(enemies2Rect.intersects(playerRect)) 
 					live = false;
 			}
@@ -185,7 +185,7 @@ int main() {
 				}
 			}
 
-			//Colision del Proyectil y de los enimigos
+			//Colision del Proyectil y de los enemigos
 			for(int i = 0; i < (int)proyectilesPlayer.size(); i++){
 				proyectilPosition = Vector2f(window.mapCoordsToPixel(proyectilesPlayer[i].GetPosition()));
 				IntRect proyectilRect(proyectilPosition.x-0.75,proyectilPosition.y-0.75,5,5);
@@ -204,7 +204,7 @@ int main() {
 				IntRect proyectilRect(proyectilPosition.x-0.75,proyectilPosition.y-0.75,5,5);
                 for(int j2 = 0; j2 < (int)enemies2.size(); j2++){
                         enemie2Pos=Vector2f(window.mapCoordsToPixel(enemies2[j2].GetPosition()));
-                        IntRect enemies2Rect(enemie2Pos.x-10,enemie2Pos.y-10,25,25);
+                        IntRect enemies2Rect((enemie2Pos.x-10),(enemie2Pos.y-10),25,25);
                         if(enemies2Rect.intersects(proyectilRect)){
                             proyectilesPlayer.erase(proyectilesPlayer.begin()+i);
                             enemies2[j2].TakeHp();

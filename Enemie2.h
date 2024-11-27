@@ -14,6 +14,7 @@ class  Enemie2 : public Enemie{
         bool activado;
         float vel;
         int Hp;
+        float incremento;
         int dist;
         void Movement(Vector2f);
         void apuntarPlayer(Vector2f);
@@ -21,6 +22,7 @@ class  Enemie2 : public Enemie{
         Enemie2(Vector2f,Texture&);
 
         void Update(Vector2f,int);
+        Vector2f getScala();
         Vector2f GetPosition() ;
         void TakeHp();
         int ConsultHp();

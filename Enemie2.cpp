@@ -6,12 +6,14 @@ Enemie2 :: Enemie2 (Vector2f posi, Texture &texture) : Enemie(posi,texture){
     sprite.setOrigin(texture.getSize().x/2,texture.getSize().y/2);
     sprite.setPosition(posi);
     vel = 1.2;
+    incremento = 0.0001;
     Hp = 240;
     activado = false;
 }
 
 void Enemie2::Update(Vector2f posPlayer,int dista){
-    dist=dista;
+    sprite.setScale(sprite.getScale()+Vector2f(incremento,incremento));
+    dist = dista;
     Movement(posPlayer);
     apuntarPlayer(posPlayer);
 }
@@ -40,6 +42,12 @@ int Enemie2::ConsultHp(){
 Vector2f Enemie2::GetPosition(){
     return sprite.getPosition();
 }
+
+Vector2f Enemie2 :: getScala(){
+    return sprite.getScale();
+};
+
+
 void Enemie2::draw(RenderTarget &rt, RenderStates rs) const{
     rt.draw(sprite,rs);
 }
